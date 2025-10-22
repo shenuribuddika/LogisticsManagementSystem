@@ -80,9 +80,22 @@ public class LogisticsManagementSystem {
                 System.out.println("Invalid option");
          }
         }while(choice!=0);
-    }  
-    static void Add_City(){
     }
+    
+    
+    static void Add_City(){
+        if (City_Count >= Max_Cities) {
+            System.out.println("City limit reached");
+            return;
+        }
+        System.out.print("Enter new city name : ");
+        String name = sc.nextLine();
+        cities[City_Count] = name;
+        City_Count++;
+        System.out.println("City added successfully");
+    }
+    
+    
     static void Rename_City(){
     }
     static void Remove_City(){       
