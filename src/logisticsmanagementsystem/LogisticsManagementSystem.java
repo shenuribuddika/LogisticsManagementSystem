@@ -96,8 +96,25 @@ public class LogisticsManagementSystem {
     }
     
     
+    
+    
     static void Rename_City(){
+        System.out.print("Enter city index to rename: ");
+        int x = sc.nextInt();
+        if (x < 0 || x >= City_Count) {
+            System.out.println("Invalid index");
+            return;
+        }
+        
+        System.out.print("Enter new name: ");
+        cities[x] = sc.nextLine();
+        System.out.println("City renamed: ");
+    
     }
+    
+    
+    
+    
     static void Remove_City(){       
     }
     static void List_Cities(){
