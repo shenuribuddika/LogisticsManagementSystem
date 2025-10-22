@@ -134,10 +134,13 @@ public class LogisticsManagementSystem {
         
     }
     
-    
-    
+   
     
     static void List_Cities(){
+        System.out.println("Cities: ");
+        for (int y = 0; y < City_Count; y++) {
+            System.out.println(y + " " + cities[y]);
+        }
     }
     
     
