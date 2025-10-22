@@ -53,4 +53,22 @@ public class LogisticsManagementSystem {
         }
 
     }
+    static void City_Managment(){
+    }
+    
+    static void Distance_Managment(){
+    }
+    
+    static void Handle_Delivery(){
+    }
+    
+    static void Report(){
+    }
+    
+    static void Save_Data(){
+    }
+    
+    
+    
+        
 }    
