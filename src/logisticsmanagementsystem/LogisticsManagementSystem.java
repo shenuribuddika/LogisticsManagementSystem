@@ -57,7 +57,44 @@ public class LogisticsManagementSystem {
 
     }
     static void City_Managment(){
+        int choice;
+        do{
+        System.out.println("--- CITY MANAGEMENT ---");
+        System.out.println("1. Add City");
+        System.out.println("2. Rename City");
+        System.out.println("3. Remove City");
+        System.out.print("Choose option: ");
+        choice = sc.nextInt();
+        sc.nextLine();
+        
+         switch (choice) {
+            case 1: Add_City();
+            break;
+            case 2: Rename_City();
+            break;
+            case 3: Remove_City();
+            break;
+            case 4: List_Cities();
+            break;
+            default:
+                System.out.println("Invalid option");
+         }
+        }while(choice!=0);
+    }  
+    static void Add_City(){
     }
+    static void Rename_City(){
+    }
+    static void Remove_City(){       
+    }
+    static void List_Cities(){
+    }
+    
+    
+    
+    
+    
+    
     static void Distance_Managment(){
     }
     static void Handle_Delivery(){
