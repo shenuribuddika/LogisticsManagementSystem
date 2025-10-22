@@ -115,8 +115,28 @@ public class LogisticsManagementSystem {
     
     
     
-    static void Remove_City(){       
+    static void Remove_City(){ 
+        System.out.print("Enter index to remove: ");
+        int i = sc.nextInt();
+        if (i < 0 || i >= City_Count) {
+            System.out.println("Invalid index");
+            return;
+        }
+        for (int j = i; j < City_Count - 1; j++) {
+            cities[j] = cities[j + 1];
+            for (int k = 0; k < City_Count; k++) {
+                Distance[j][k] = Distance[j + 1][k];
+                Distance[k][j] = Distance[k][j + 1];
+            }
+        }
+        City_Count--;
+        System.out.println("City removed");
+        
     }
+    
+    
+    
+    
     static void List_Cities(){
     }
     
