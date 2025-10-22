@@ -144,12 +144,32 @@ public class LogisticsManagementSystem {
     }
     
     
-    
-    
-    
-    
+   
     static void Distance_Managment(){
+        if (City_Count < 2) {
+            System.out.println("Add at least two cities");
+            return;
+        }
+        System.out.println("--- DISTANCE MANAGEMENT ---");
+        System.out.println("Enter first city index: ");
+        int i = sc.nextInt();
+        System.out.println("Enter second city index: ");
+        int j = sc.nextInt();
+        if (i == j) {
+            System.out.println("Distance from a city: ");
+            return;
+        }
+        System.out.println("Enter distance in km: ");
+        int k = sc.nextInt();
+        Distance[i][j] = k;
+        Distance[j][i] = k;
+        System.out.println("Successfully");
     }
+    
+    
+    
+    
+    
     static void Handle_Delivery(){
     }
     static void Report(){
