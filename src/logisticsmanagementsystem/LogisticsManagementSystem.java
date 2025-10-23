@@ -234,7 +234,7 @@ public class LogisticsManagementSystem {
     
     
     
-     static class Delivery {
+    static class Delivery {
         String fromCity;
         String toCity;
         double distance;
@@ -257,7 +257,45 @@ public class LogisticsManagementSystem {
     
     
     static void Report(){
+        static void Report() {
+        System.out.println("--- PERFORMANCE REPORTS ---");
+        if (Delivery_Count == 0) {
+        System.out.println("No deliveries have been made yet");
+        return;
+        }
+
+        int Total_Distance = 0; 
+        int Total_Time = 0;
+        int Total_Profit = 0;
+        int Total_Revenue = 0;
+        double maxDistance = Double.MIN_VALUE;
+        double minDistance = Double.MAX_VALUE;
+
+
+        for (int i = 0; i < Delivery_Count; i++) {
+            Total_Distance += deliveries[i].distance;
+            Total_Time += deliveries[i].time;
+            Total_Profit += deliveries[i].profit;
+            Total_Revenue += deliveries[i].Customer_Charge;
+            if (deliveries[i].distance > maxDistance) {
+                maxDistance = deliveries[i].distance;
+               
+            if (deliveries[i].distance < minDistance) {
+                minDistance = deliveries[i].distance;
+                
+                
+            }
+        }
+
+        System.out.println("Total Distance Covered is : " + Total_Distance + " km");
+        System.out.printf("Average Delivery Time is :"+ Total_Time /Delivery_Count);
+        System.out.printf("Total Revenue is :"+ Total_Revenue);
+        System.out.printf("Total Profit is :"+ Total_Profit);
+        }
+    
     }
+        
+        
     static void Show_Cities(){
     }
     static void Save_Data(){
