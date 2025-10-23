@@ -218,6 +218,18 @@ public class LogisticsManagementSystem {
         double customerCharge = totalCost + profit;
         
         
+        System.out.println("=== DELIVERY COST ESTIMATION ===");
+        System.out.println("From: " + cities[source]);
+        System.out.println("To: " + cities[destination]);
+        System.out.println("Vehicle Type is : " + Vehicle_Type[z]);
+        System.out.println("Distance is : " + distance + " km");
+        System.out.printf("Base Cost is : "+ cost);
+        System.out.printf("Fuel Cost is : "+ fuelCost);
+        System.out.printf("Total Cost is : "+ totalCost);
+        System.out.printf("Profit is : "+ profit);
+        System.out.printf("Customer Charge is : "+ customerCharge);
+        System.out.printf("Estimated Time is : "+ time);
+        
     }
     
     
