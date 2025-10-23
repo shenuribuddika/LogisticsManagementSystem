@@ -206,12 +206,25 @@ public class LogisticsManagementSystem {
             System.out.println("Weight exceeds vehicle capacity!");
             return;
         }
+        
+        
+        
+        double cost = distance * Rate_Per_km[z] * (1 + (weight / 10000.0));
+        double time = distance / (double) Avg_Speed[z];
+        double fuelUsed = distance / (double) Fuel_Efficiency[z];
+        double fuelCost = fuelUsed * FUEL_PRICE;
+        double totalCost = cost + fuelCost;
+        double profit = cost * 0.25;
+        double customerCharge = totalCost + profit;
+        
+        
     }
+    
+    
+    
     
     static void Show_Cities(){
     }
-    
-    
     static void Report(){
     }
     static void Save_Data(){
