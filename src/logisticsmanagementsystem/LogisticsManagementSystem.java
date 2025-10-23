@@ -234,10 +234,31 @@ public class LogisticsManagementSystem {
     
     
     
+     static class Delivery {
+        String fromCity;
+        String toCity;
+        double distance;
+        double time;
+        double profit;
+        double Customer_Charge;
     
-    static void Show_Cities(){
-    }
+        
+
+        Delivery(String from, String to, double dist, double t, double p, double charge){
+            fromCity = from;
+            toCity = to;
+            distance = dist;
+            time = t;
+            profit = p;
+            
+        }
+    } 
+     
+    
+    
     static void Report(){
+    }
+    static void Show_Cities(){
     }
     static void Save_Data(){
     }
