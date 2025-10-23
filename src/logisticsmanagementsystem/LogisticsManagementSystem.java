@@ -257,7 +257,6 @@ public class LogisticsManagementSystem {
     
     
     static void Report(){
-        static void Report() {
         System.out.println("--- PERFORMANCE REPORTS ---");
         if (Delivery_Count == 0) {
         System.out.println("No deliveries have been made yet");
@@ -294,12 +293,26 @@ public class LogisticsManagementSystem {
         }
     
     }
+      
         
         
+    static void Save_Data(){
+        for (int i = 0; i < City_Count; i++) {
+            System.out.println(cities[i]);
+        }
+        for (int i = 0; i < City_Count; i++) {
+            for (int j = 0; j < City_Count; j++){ 
+                System.out.print(Distance[i][j] + " ");
+            }
+                
+        }
+    }
+       
+    
+    
     static void Show_Cities(){
     }
-    static void Save_Data(){
-    }
+   
     
     
 
