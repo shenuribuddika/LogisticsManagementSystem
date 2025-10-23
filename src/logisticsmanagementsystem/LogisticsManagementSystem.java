@@ -171,7 +171,47 @@ public class LogisticsManagementSystem {
     
     
     static void Handle_Delivery(){
+        if (City_Count < 2) {
+            System.out.println("Add cities ");
+            return;
+        }
+
+        Show_Cities();
+        System.out.print("Enter source city index: ");
+        int source = sc.nextInt();
+        System.out.print("Enter destination city index: ");
+        int destination = sc.nextInt();
+
+        if (source == destination) {
+            System.out.println("Source and destination must be different");
+            return;
+        }
+
+        int distance = Distance[source][destination];
+        if (distance == 0) {
+            System.out.println("Distance not defined between selected cities");
+            return;
+        }
+
+        System.out.print("Enter weight in kg: ");
+        double weight = sc.nextDouble();
+
+        System.out.println("Choose vehicle: ");
+        for (int z = 0; z < Vehicle_Type.length; z++) {
+            System.out.println((z + 1) + ". " + Vehicle_Type[z] + " (Capacity: " + Capacity[z] + "kg)");
+        }
+        int z = sc.nextInt() - 1;
+        
+        if (weight > Capacity[z]) {
+            System.out.println("Weight exceeds vehicle capacity!");
+            return;
+        }
     }
+    
+    static void Show_Cities(){
+    }
+    
+    
     static void Report(){
     }
     static void Save_Data(){
