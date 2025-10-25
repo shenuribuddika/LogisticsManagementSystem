@@ -311,6 +311,10 @@ public class LogisticsManagementSystem {
     
     
     static void Show_Cities(){
+        System.out.println("Cities List:");
+        for (int i = 0; i < City_Count; i++) {
+            System.out.println(i + " - " + cities[i]);
+        }
     }
    
     
